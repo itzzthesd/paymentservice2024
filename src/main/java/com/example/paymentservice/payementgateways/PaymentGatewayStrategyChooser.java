@@ -4,12 +4,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PaymentGatewayStrategyChooser {
-    private RazorpayPaymentGateway razorpayPaymentGateway;
-    //private StripePaymentGateway stripePaymentGateway;
+    //private RazorpayPaymentGateway razorpayPaymentGateway;
+    private StripePaymentGateway stripePaymentGateway;
 
-    public PaymentGatewayStrategyChooser (RazorpayPaymentGateway razorpayPaymentGateway) { //StripePaymentGateway stripePaymentGateway
-        this.razorpayPaymentGateway = razorpayPaymentGateway;
-        //this.stripePaymentGateway = stripePaymentGateway;
+    public PaymentGatewayStrategyChooser (StripePaymentGateway stripePaymentGateway) { //StripePaymentGateway stripePaymentGateway
+        //this.razorpayPaymentGateway = razorpayPaymentGateway;
+        this.stripePaymentGateway = stripePaymentGateway;
     }
 
     public PaymentGateway getBestPaymentGateway() {
@@ -20,6 +20,6 @@ public class PaymentGatewayStrategyChooser {
 //        }
 //
 //        return stripePaymentGateway;
-        return razorpayPaymentGateway;
+        return stripePaymentGateway;
     }
 }

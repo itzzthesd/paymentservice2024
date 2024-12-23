@@ -5,7 +5,7 @@ import com.razorpay.RazorpayClient;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class RazorpayPaymentGateway implements PaymentGateway{
 
     private RazorpayClient razorpayClient;
