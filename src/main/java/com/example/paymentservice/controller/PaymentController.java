@@ -18,6 +18,7 @@ public class PaymentController {
     }
     @PostMapping("/")
     public String initiatePayment(@RequestBody InitiatePaymentDTO request) {
+        System.out.println("controller got hit");
         return paymentService.initiatePayment(request.getOrderId(),
                 request.getEmail(),
                 request.getPhoneNumber(),
